@@ -1,0 +1,184 @@
+//     ____        _____ 
+//    / __ \____  / __(_)
+//   / /_/ / __ \/ /_/ / 
+//  / _, _/ /_/ / __/ /  
+// /_/ |_|\____/_/ /_/   
+//                      
+
+// HakuSpace Rofi Theme
+// Theme: line-mocha.rasi
+
+@import "~/.config/rofi/wallust/mocha.rasi"
+
+configuration {
+    modes: "drun,run,window";
+    show-icons: true;
+    terminal: "kitty";
+    drun-display-format: "{icon} {name}";
+    disable-history: false;
+    display-drun: "  Apps ";
+    display-run: "  Run ";
+    display-window: " 󰙀 Window ";
+    sidebar-mode: true;
+    window-format: "{w} | {c} | {t}";
+}
+
+/* =========================================================
+   GLOBAL VARIABLES
+   ========================================================= */
+
+* {
+    background:          @surface;
+    foreground:          @on-surface;
+    background-color:    transparent;
+    text-color:          @on-surface;
+
+    margin:              0;
+    padding:             0;
+    spacing:             0;
+}
+
+/* =========================================================
+   MAIN WINDOW
+   ========================================================= */
+
+window {
+    width:               35%;
+    height:              50%;
+    background-color:    @surface;
+    padding:             20px;
+    border-radius:       20px;
+}
+
+/* =========================================================
+   MAIN BOX
+   ========================================================= */
+
+mainbox {
+    spacing:             12px;
+    children:            [ inputbar, content-area ];
+}
+
+/* =========================================================
+   CONTENT AREA
+   ========================================================= */
+
+content-area {
+    orientation:         vertical;
+    spacing:             0;
+    children:            [ mode-switcher, listview ];
+}
+
+/* =========================================================
+   INPUT BAR
+   ========================================================= */
+
+inputbar {
+    margin:              0 6px;
+    children:            [ prompt, entry ];
+    border:              0 0 3px 0;
+    border-color:        @primary;
+    border-radius:       0;
+}
+
+prompt {
+    padding:             6px 10px;
+    background-color:    @primary;
+    text-color:          @on-primary;
+    border-radius:       12px 12px 0 0;
+}
+
+entry {
+    padding:             6px;
+    margin:              0 10px;
+    text-color:          @primary;
+    placeholder:         "Search...";
+    placeholder-color:   @on-surface-variant;
+}
+
+/* =========================================================
+   MODE SWITCHER
+   ========================================================= */
+
+mode-switcher {
+    margin:              0 6px 6px 6px;
+    padding:             0;
+    background-color:    transparent;
+    spacing:             6px;
+    border:              3px 0 0 0;
+    border-color:        @primary;
+    border-radius:       0;
+}
+
+button {
+    padding:             8px 14px;
+    background-color:    transparent;
+    text-color:          @primary;
+    border-radius:       0 0 12px 12px;
+}
+
+button selected {
+    background-color:    @primary;
+    text-color:          @on-primary;
+}
+
+/* =========================================================
+   LISTVIEW
+   ========================================================= */
+
+listview {
+    background-color:    transparent;
+    scrollbar:            true;
+    cycle:               true;
+    dynamic:              true;
+    border-radius:       0;
+}
+
+/* =========================================================
+   ELEMENTS
+   ========================================================= */
+
+element {
+    padding:             6px;
+    margin:              6px;
+    background-color:    transparent;
+    orientation:         horizontal;
+    vertical-align:      0.5;
+    border-radius:       6px;
+}
+
+element-icon {
+    size:                24px;
+    margin:              0 10px 0 0;
+    background-color:    transparent;
+    vertical-align:      0.5;
+}
+
+element-text {
+    text-color:          @primary;
+    background-color:    transparent;
+    vertical-align:      0.5;
+}
+
+/* =========================================================
+   ELEMENT STATES
+   ========================================================= */
+
+element selected {
+    background-color:    @primary;
+}
+
+element-text selected {
+    text-color:          @on-primary;
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+scrollbar {
+    background-color:    transparent;
+    handle-width:        6px;
+    handle-color:        @primary;
+    padding:             0px 0px 0px 6px;
+}

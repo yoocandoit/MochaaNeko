@@ -1,0 +1,279 @@
+/* ---- Import Catppuccin colors ---- */
+@import "~/.config/rofi/wallust/mocha.rasi"
+
+/* ---- Configuration ---- */
+configuration {
+    modi:                    "drun,window";
+    show-icons:              true;
+    display-drun:            " apps";
+    display-run:             " term";
+    display-filebrowser:     " files";
+    display-window:          " window";
+    drun-display-format:     "{name}";
+    hover-select:            true;
+    font:                    "Google Sans Flex Regular 11";
+    me-select-entry:         "MouseSecondary";
+    me-accept-entry:         "MousePrimary";
+    window-format:            "{w} · {c} · {t}";
+    icon-theme:              "Colloid";
+}
+
+/* ---- Window ---- */
+window {
+    enabled:                 true;
+    fullscreen:              false;
+    transparency:             "real";
+    cursor:                  "default";
+    margin:                  0px;
+    spacing:                 0px;
+    border:                  2px;
+    border-radius:           20px;
+
+    location:                center;
+    anchor:                  center;
+
+    width:                   30%;
+
+    background-color:        rgba(30,30,46,0.60);
+    border-color:            @outline;
+}
+
+/* ---- Main Box ---- */
+mainbox {
+    enabled:                 true;
+    orientation:             vertical;
+
+    children:                [ "inputbar", "listbox" ];
+    margin:                  0px;
+    spacing:                 0px;
+    border:                  0px;
+
+    background-color:        transparent;
+}
+
+/* ---- Inputbar ---- */
+inputbar {
+    enabled:                 true;
+
+    padding:                 8px;
+    margin:                  10px;
+
+    background-color:        @surface-container;
+    border-radius:           10px;
+
+    orientation:             horizontal;
+    children:                [ "entry" ];
+}
+
+/* ---- Entry ---- */
+entry {
+    enabled:                 true;
+    expand:                  true;
+    width:                   100%;
+
+    padding:                 8px;
+
+    background-color:        transparent;
+    border-radius:           8px;
+
+    text-color:              @on-surface;
+    cursor:                  text;
+
+    placeholder:             "Search";
+    placeholder-color:       @on-surface-variant;
+}
+
+/* ---- Listbox ---- */
+listbox {
+    spacing:                 0px;
+
+    padding:                 0px 6px 8px 6px;
+
+    background-color:        transparent;
+
+    orientation:             vertical;
+    children:                [ "message", "listview" ];
+}
+
+/* ---- Listview ---- */
+listview {
+    enabled:                 true;
+
+    columns:                 1;
+    lines:                   7;
+
+    cycle:                   true;
+    dynamic:                 true;
+
+    scrollbar:               false;
+
+    layout:                  vertical;
+
+    fixed-height:            true;
+    fixed-columns:            true;
+
+    spacing:                 0px;
+    padding:                 0px;
+
+    background-color:        transparent;
+    border:                  0px;
+}
+
+/* ---- Scrollbar ---- */
+scrollbar {
+    border:                  0px;
+    background-color:        transparent;
+
+    handle-color:            @primary;
+    handle-width:             2px;
+}
+
+/* =========================
+   ELEMENTS
+   ========================= */
+
+element {
+    enabled:                 true;
+
+    spacing:                 8px;
+    padding:                 8px;
+
+    border-radius:            10px;
+
+    background-color:        transparent;
+    text-color:              @on-surface;
+
+    cursor:                  pointer;
+}
+
+/* ---- Normal ---- */
+element normal.normal {
+    background-color:        transparent;
+    text-color:              @on-surface;
+}
+
+/* ---- Hover ---- */
+element normal.active {
+    background-color:        @primary;
+    text-color:              @on-primary;
+
+    border-radius:            10px;
+}
+
+/* ---- Urgent ---- */
+element normal.urgent {
+    background-color:        @error;
+    text-color:              @on-error;
+
+    border-radius:            10px;
+}
+
+/* =========================
+   SELECTED
+   ========================= */
+
+element selected {
+    background-color:        @primary;
+    text-color:              @on-primary;
+
+    border-radius:            10px;
+}
+
+element selected.normal {
+    background-color:        @primary;
+    text-color:              @on-primary;
+
+    border-radius:            10px;
+}
+
+element selected.active {
+    background-color:        @primary;
+    text-color:              @on-primary;
+
+    border-radius:            10px;
+}
+
+element selected.urgent {
+    background-color:        @primary;
+    text-color:              @on-primary;
+
+    border-radius:            10px;
+}
+
+/* ---- Alternate rows ---- */
+element alternate.normal {
+    background-color:        transparent;
+    text-color:              @on-surface;
+}
+
+element alternate.active {
+    background-color:        @primary;
+    text-color:              @on-primary;
+}
+
+element alternate.urgent {
+    background-color:        transparent;
+    text-color:              @on-surface;
+}
+
+/* =========================
+   ICON
+   ========================= */
+
+element-icon {
+    enabled:                 true;
+
+    background-color:        transparent;
+    text-color:              inherit;
+
+    size:                    34px;
+
+    cursor:                  inherit;
+}
+
+/* =========================
+   TEXT
+   ========================= */
+
+element-text {
+    enabled:                 true;
+    expand:                  true;
+
+    background-color:        transparent;
+    text-color:              inherit;
+
+    cursor:                  inherit;
+
+    vertical-align:          0.5;
+    horizontal-align:        0.0;
+}
+
+/* ---- Selected text stays transparent ---- */
+element-text selected {
+    background-color:        transparent;
+    text-color:              @on-primary;
+}
+
+/* ---- Message ---- */
+message {
+    background-color:        transparent;
+    border:                  0px;
+}
+
+textbox {
+    margin:                  10px;
+    padding:                 8px;
+
+    background-color:        @secondary-container;
+    text-color:              @on-secondary-container;
+
+    vertical-align:           0.5;
+    horizontal-align:         0.5;
+}
+
+error-message {
+    padding:                 8px;
+
+    background-color:        @error-container;
+    text-color:              @on-error-container;
+}

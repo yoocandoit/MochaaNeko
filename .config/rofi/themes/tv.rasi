@@ -1,0 +1,244 @@
+//     ____        _____ 
+//    / __ \____  / __(_)
+//   / /_/ / __ \/ /_/ / 
+//  / _, _/ /_/ / __/ /  
+// /_/ |_|\____/_/ /_/   
+//                      
+
+// HakuSpace Rofi Theme
+// Theme: television-mocha.rasi
+
+@import "~/.config/rofi/wallust/mocha.rasi"
+
+configuration {
+    modes: "drun,run,window";
+    show-icons: true;
+    terminal: "kitty";
+    drun-display-format: "{icon} {name}";
+    disable-history: false;
+    display-drun: "  Apps ";
+    display-run: "  Run ";
+    display-window: " 󰙀 Window ";
+    sidebar-mode: true;
+    window-format: "{w} | {c} | {t}";
+}
+
+/* =========================================================
+   WINDOW
+   ========================================================= */
+
+window {
+    width:               50%;
+    height:              65%;
+
+    background-color:    @surface;
+
+    padding:             24px;
+    border-radius:       20px;
+}
+
+/* =========================================================
+   MAIN BOX
+   ========================================================= */
+
+mainbox {
+    background-color:    @surface;
+
+    spacing:             16px;
+    children:            [ imagebox, content-area ];
+}
+
+/* =========================================================
+   CONTENT AREA
+   ========================================================= */
+
+content-area {
+    background-color:    @surface;
+
+    orientation:         horizontal;
+    spacing:             0;
+    children:            [ mode-switcher, listview ];
+}
+
+/* =========================================================
+   IMAGE BOX
+   ========================================================= */
+
+imagebox {
+    expand:                      false;
+
+    background-color:            @surface;
+
+    margin:                      0 0 20px;
+    padding:                     0 0 20% 0;
+
+    border-radius:               12px;
+
+    background-image:            url("../../.cache/walpaper_preview.jpg", width);
+
+    children:                    [ inputbar ];
+}
+
+/* =========================================================
+   INPUT BAR
+   ========================================================= */
+
+inputbar {
+    background-color:    rgba(0, 0, 0, 0.3);
+
+    children:            [ prompt, entry ];
+}
+
+/* =========================================================
+   PROMPT
+   ========================================================= */
+
+prompt {
+    padding:             10px 15px;
+
+    background-color:    @primary;
+    text-color:          @on-primary;
+}
+
+/* =========================================================
+   SEARCH ENTRY
+   ========================================================= */
+
+entry {
+    padding:             10px;
+    margin:              0 10px;
+
+    background-color:    transparent;
+
+    text-color:          @on-surface;
+
+    placeholder:         "Search...";
+    placeholder-color:   @on-surface-variant;
+}
+
+/* =========================================================
+   MODE SWITCHER
+   ========================================================= */
+
+mode-switcher {
+    orientation:         vertical;
+
+    background-color:    @surface;
+
+    spacing:             10px;
+
+    border:              0 5px 0 0;
+    border-color:        @primary;
+    border-radius:       0;
+}
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+button {
+    padding:             8px 14px;
+
+    background-color:    transparent;
+
+    text-color:          @primary;
+
+    border-radius:       12px 0 0 12px;
+}
+
+/* Selected button */
+
+button selected {
+    background-color:    @primary;
+    text-color:          @on-primary;
+}
+
+/* =========================================================
+   LIST VIEW
+   ========================================================= */
+
+listview {
+    background-color:    transparent;
+
+    scrollbar:            true;
+    cycle:                true;
+    dynamic:              true;
+    layout:               vertical;
+}
+
+/* =========================================================
+   ELEMENT
+   ========================================================= */
+
+element {
+    padding:             10px 10px 10px 20px;
+
+    background-color:    transparent;
+
+    orientation:         horizontal;
+    vertical-align:      0.5;
+}
+
+/* Normal item */
+element normal {
+    background-color:    transparent;
+}
+
+/* Alternate item */
+element alternate {
+    background-color:    transparent;
+}
+
+/* Urgent item */
+element urgent {
+    background-color:    transparent;
+}
+
+/* Selected item */
+element selected {
+    background-color:    @primary;
+    border-radius:       0 12px 12px 0;
+}
+
+/* =========================================================
+   ELEMENT ICON
+   ========================================================= */
+
+element-icon {
+    size:                 24px;
+    margin:               0 10px 0 0;
+
+    background-color:     transparent;
+
+    vertical-align:       0.5;
+}
+
+/* =========================================================
+   ELEMENT TEXT
+   ========================================================= */
+
+element-text {
+    text-color:           @on-surface;
+    background-color:     transparent;
+
+    vertical-align:       0.5;
+}
+
+/* Selected text */
+element-text selected {
+    text-color:           @on-primary;
+    background-color:     transparent;
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+scrollbar {
+    background-color:     transparent;
+
+    handle-width:         6px;
+    handle-color:        @primary;
+
+    padding:              0px 0px 0px 20px;
+}

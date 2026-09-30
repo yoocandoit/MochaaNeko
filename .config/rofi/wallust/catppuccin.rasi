@@ -1,0 +1,62 @@
+/* ---- 💫 Catppuccin Mocha + Wallust 💫 ---- */
+
+* {
+    /* Active */
+    active-background: #cba6f7;
+    active-foreground: #1e1e2e;
+
+    /* Normal */
+    normal-background: #1e1e2e;
+    normal-foreground: #cdd6f4;
+
+    /* Urgent */
+    urgent-background: #f38ba8;
+    urgent-foreground: #1e1e2e;
+
+    /* Alternate */
+    alternate-active-background: #cba6f7;
+    alternate-active-foreground: #1e1e2e;
+
+    alternate-normal-background: #181825;
+    alternate-normal-foreground: #cdd6f4;
+
+    alternate-urgent-background: #f38ba8;
+    alternate-urgent-foreground: #1e1e2e;
+
+    /* Selected */
+    selected-active-background: #cba6f7;
+    selected-active-foreground: #1e1e2e;
+
+    selected-normal-background: #cba6f7;
+    selected-normal-foreground: #1e1e2e;
+
+    selected-urgent-background: #f38ba8;
+    selected-urgent-foreground: #1e1e2e;
+
+    /* Main */
+    background-color: #1e1e2e;
+    background: rgba(30, 30, 46, 0.92);
+    foreground: #cdd6f4;
+
+    /* Border */
+    border-color: #f5c2e7;
+
+    /* Catppuccin Mocha palette */
+    color0:  #45475a;
+    color1:  #f38ba8;
+    color2:  #a6e3a1;
+    color3:  #f9e2af;
+    color4:  #89b4fa;
+    color5:  #cba6f7;
+    color6:  #94e2d5;
+    color7:  #bac2de;
+
+    color8:  #585b70;
+    color9:  #f38ba8;
+    color10: #a6e3a1;
+    color11: #f9e2af;
+    color12: #89b4fa;
+    color13: #cba6f7;
+    color14: #94e2d5;
+    color15: #cdd6f4;
+}

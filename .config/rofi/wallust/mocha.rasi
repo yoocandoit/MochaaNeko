@@ -1,0 +1,65 @@
+* {
+    /* Primary — Mauve */
+    primary: #cba6f7;
+    primary-fixed: #e8d5ff;
+    primary-fixed-dim: #cba6f7;
+    on-primary: #1e1e2e;
+    on-primary-fixed: #1e1e2e;
+    on-primary-fixed-variant: #302744;
+    primary-container: #493760;
+    on-primary-container: #e8d5ff;
+
+    /* Secondary — Lavender */
+    secondary: #b4befe;
+    secondary-fixed: #d9dcff;
+    secondary-fixed-dim: #b4befe;
+    on-secondary: #1e1e2e;
+    on-secondary-fixed: #1e1e2e;
+    on-secondary-fixed-variant: #39364d;
+    secondary-container: #36364d;
+    on-secondary-container: #d9dcff;
+
+    /* Tertiary — Pink */
+    tertiary: #f5c2e7;
+    tertiary-fixed: #ffd9f1;
+    tertiary-fixed-dim: #f5c2e7;
+    on-tertiary: #1e1e2e;
+    on-tertiary-fixed: #1e1e2e;
+    on-tertiary-fixed-variant: #4d3545;
+    tertiary-container: #563c4e;
+    on-tertiary-container: #ffd9f1;
+
+    /* Error */
+    error: #f38ba8;
+    on-error: #1e1e2e;
+    error-container: #7d2945;
+    on-error-container: #ffc2d0;
+
+    /* Surface — Mocha */
+    surface: #1e1e2e;
+    on-surface: #cdd6f4;
+    on-surface-variant: #a6adc8;
+
+    /* Outline */
+    outline: #7f849c;
+    outline-variant: #45475a;
+
+    /* Misc */
+    shadow: #000000;
+    scrim: #000000;
+
+    /* Inverse */
+    inverse-surface: #cdd6f4;
+    inverse-on-surface: #313244;
+    inverse-primary: #7957a6;
+
+    /* Surface variants */
+    surface-dim: #181825;
+    surface-bright: #45475a;
+
+    surface-container-lowest: #11111b;
+    surface-container-low: #181825;
+    surface-container: #1e1e2e;
+    surface-container-high: #313244;
+    surface-container-highest: #45475a;
+}

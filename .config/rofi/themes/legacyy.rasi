@@ -1,0 +1,150 @@
+//     ____        _____ 
+//    / __ \____  / __(_)
+//   / /_/ / __ \/ /_/ / 
+//  / _, _/ /_/ / __/ /  
+// /_/ |_|\____/_/ /_/   
+//                      
+
+// HakuSpace Rofi Theme
+// Theme: legacy-mocha.rasi
+
+@import "~/.config/rofi/wallust/mocha.rasi"
+
+configuration {
+    modes: "drun,run,window";
+    show-icons: true;
+    terminal: "kitty";
+    drun-display-format: "{icon} {name}";
+    disable-history: false;
+    display-drun: "  Apps ";
+    display-run: "  Run ";
+    display-window: " 󰙀 Window ";
+    sidebar-mode: true;
+    window-format: "{w} | {c} | {t}";
+}
+
+/* ===== GLOBAL ===== */
+* {
+    background:          @surface;
+    foreground:          @on-surface;
+    background-color:    transparent;
+    text-color:           @on-surface;
+
+    margin:              0;
+    padding:             0;
+    spacing:             0;
+}
+
+/* ===== MAIN WINDOW ===== */
+window {
+    width:               40%;
+    height:              55%;
+    background-color:    @surface;
+    border-radius:       20px;
+    padding:             20px;
+}
+
+/* ===== MAIN BOX ===== */
+mainbox {
+    spacing:             12px;
+    children:            [ inputbar, content-area ];
+}
+
+/* ===== CONTENT AREA ===== */
+content-area {
+    orientation:         vertical;
+    spacing:             0;
+    children:            [ mode-switcher, listview ];
+}
+
+/* ===== INPUT BAR ===== */
+inputbar {
+    padding:             10px;
+    background-color:    @surface-container;
+    border-radius:       20px;
+    children:            [ prompt, entry ];
+}
+
+prompt {
+    padding:             10px 15px;
+    background-color:    @primary;
+    text-color:          @on-primary;
+    border-radius:       12px;
+}
+
+entry {
+    padding:             10px;
+    margin:              0 10px 0 10px;
+    text-color:          @primary;
+    placeholder:         "Search...";
+    placeholder-color:   @on-surface-variant;
+}
+
+/* ===== MODE SWITCHER ===== */
+mode-switcher {
+    margin:              0 10px 10px 10px;
+    padding:             6px;
+    background-color:    @primary;
+    border-radius:       12px;
+    spacing:             10px;
+}
+
+button {
+    padding:             8px 14px;
+    border-radius:       12px;
+    background-color:    transparent;
+    text-color:          @on-primary;
+}
+
+button selected {
+    background-color:    @surface;
+    text-color:          @primary;
+}
+
+/* ===== LISTVIEW ===== */
+listview {
+    margin:              0px 0px 10px 0px;
+    scrollbar:           true;
+    cycle:               true;
+    dynamic:              true;
+}
+
+/* ===== ELEMENTS ===== */
+element {
+    padding:             10px;
+    margin:              2px 10px;
+    border-radius:       12px;
+    orientation:         horizontal;
+    vertical-align:      0.5;
+}
+
+element-icon {
+    size:                24px;
+    margin:              0 10px 0 0;
+    vertical-align:      0.5;
+}
+
+element-text {
+    text-color:          @primary;
+    vertical-align:      0.5;
+}
+
+/* ===== ELEMENT STATES ===== */
+element selected {
+    background-color:    @primary;
+}
+
+element-text selected {
+    text-color:          @on-primary;
+}
+
+element-icon selected {
+    background-color:    transparent;
+}
+
+/* ===== SCROLLBAR ===== */
+scrollbar {
+    handle-width:           6px;
+    handle-color:           @primary;
+    padding:                0px 0px 0px 6px;
+}

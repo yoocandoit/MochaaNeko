@@ -1,0 +1,166 @@
+//     ____        _____ 
+//    / __ \____  / __(_)
+//   / /_/ / __ \/ /_/ / 
+//  / _, _/ /_/ / __/ /  
+// /_/ |_|\____/_/ /_/   
+//                      
+
+// HakuSpace Rofi Theme
+// Theme: tablet-mocha.rasi
+
+@import "~/.config/rofi/wallust/mocha.rasi"
+
+configuration {
+    modes: "drun,run,window";
+    show-icons: true;
+    terminal: "kitty";
+    drun-display-format: "{icon} {name}";
+    disable-history: false;
+    display-drun: "  Apps ";
+    display-run: "  Run ";
+    display-window: " 󰙀 Window ";
+    sidebar-mode: true;
+    window-format: "{w} | {c} | {t}";
+}
+
+/* ===== GLOBAL VARIABLES ===== */
+* {
+    background:          rgba(0, 0, 0, 0.7);
+    foreground:          @on-surface;
+    background-color:    transparent;
+    text-color:          @on-surface;
+
+    border-radius:       0;
+    margin:              0;
+    padding:             0;
+    spacing:             0;
+}
+
+/* ===== MAIN WINDOW ===== */
+window {
+    width:               50%;
+    height:              50%;
+    background-color:    @surface;
+    padding:             24px;
+    border:              2px;  
+    border-radius:       20px;
+
+    background-color:    rgba(30,30,46,0.80);
+    border-color:        @outline;
+}
+
+mainbox {
+    orientation:         vertical;
+    spacing:             20px;
+    children:            [ inputbar, boxbar ];
+    background-color:        transparent;
+}
+
+/* ===== BOX BAR ===== */
+boxbar {
+    orientation:         horizontal;
+    spacing:             20px;
+    children:            [ imagebox, content-area ];
+}
+
+/* ===== CONTENT AREA ===== */
+content-area {
+    orientation:         horizontal;
+    spacing:             0;
+    children:            [ mode-switcher, listview ];
+}
+
+/* ===== IMAGE BOX ===== */
+imagebox {
+    expand:                      false;
+    width:                       15%;
+    border-radius:               12px;
+    background-image:            url("~/.config/rofi/.current_wallpaper", height);
+}
+
+/* ===== INPUT BAR ===== */
+inputbar {
+    orientation:         horizontal;
+    children:            [ prompt, entry ];
+}
+
+prompt {
+    padding:             10px 15px;
+    background-color:    @primary;
+    text-color:          @on-primary;
+    border-radius:       12px 0 0 12px;
+}
+
+entry {
+    padding:             10px;
+    margin:              0 10px;
+    text-color:          @primary;
+    placeholder:         "Search...";
+    placeholder-color:   @on-surface-variant;
+    background-color:    rgba(255, 255, 255, 0.1);
+    border-radius:       0 12px 12px 0;
+}
+
+/* ===== MODE SWITCHER ===== */
+mode-switcher {
+    orientation:         vertical;
+    spacing:             10px;
+    border:              0 5px 0 0;
+    border-color:        @primary;
+    border-radius:       0;
+}
+
+button {
+    padding:             8px 14px;
+    text-color:          @primary;
+    border-radius:       12px 0 0 12px;
+}
+
+button selected {
+    background-color:    @primary;
+    text-color:          @on-primary;
+}
+
+/* ===== LISTVIEW ===== */
+listview {
+    scrollbar:           true;
+    cycle:               true;
+    dynamic:             true;
+    layout:              vertical;
+
+}
+
+/* ===== ELEMENTS ===== */
+element {
+    padding:              10px;
+    orientation:          horizontal;
+    vertical-align:       0.5;
+}
+
+element-icon {
+    size:                 24px;
+    margin:               0 10px 0 0;
+    vertical-align:       0.5;
+}
+
+element-text {
+    text-color:           @primary;
+    vertical-align:       0.5;
+}
+
+/* ===== ELEMENT STATES ===== */
+element selected {
+    background-color:     @primary;
+    border-radius:        0 12px 12px 0;
+}
+
+element-text selected {
+    text-color:           @on-primary;
+}
+
+/* ===== SCROLLBAR ===== */
+scrollbar {
+    handle-width:          6px;
+    handle-color:          @primary;
+    padding:               0px 0px 0px 20px;
+}
